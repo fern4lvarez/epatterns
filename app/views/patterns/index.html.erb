@@ -1,29 +1,35 @@
-<h1>Listing patterns</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Image url</th>
-    <th>Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @patterns.each do |pattern| %>
-  <tr>
-    <td><%= pattern.title %></td>
-    <td><%= pattern.description %></td>
-    <td><%= pattern.image_url %></td>
-    <td><%= pattern.price %></td>
-    <td><%= link_to 'Show', pattern %></td>
-    <td><%= link_to 'Edit', edit_pattern_path(pattern) %></td>
-    <td><%= link_to 'Destroy', pattern, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="pattern_list" >
+  <h1>Listing patterns</h1>
+  
+  <table>
+    <% @patterns.each do |pattern| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
+      
+        <td>
+          <%= image_tag(pattern.image_url, :class => 'list_image') %>
+        </td>
+        
+        <td class="list_description" >
+          <dl>
+            <dt><%= pattern.title %></dt>
+            <dd><%= truncate(strip_tags(pattern.description),
+                    :length => 80) %></dd>
+            <dd><%= pattern.price.to_s + "€" %></dd>
+          </dl>
+        </td>
+        
+        <td class="list_actions" >
+          <%= link_to 'Show', pattern %><br/>
+          <%= link_to 'Edit', edit_pattern_path(pattern) %><br/>
+          <%= link_to 'Destroy', pattern,
+                      :confirm => 'Are you sure?',
+                      :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 
 <br />
 
-<%= link_to 'New Pattern', new_pattern_path %>
+<%= link_to 'New pattern', new_pattern_path %>
