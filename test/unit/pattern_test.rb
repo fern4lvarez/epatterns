@@ -28,13 +28,6 @@ class PatternTest < ActiveSupport::TestCase
     assert pattern.valid?
   end
   
-  def new_pattern(image_url)
-    Pattern.new(:title       => "Pattern",
-                          :description => "One pattern",
-                          :image_url   => image_url,
-                          :price       => 1)
-  end
-  
   test "image url" do
     ok = %w{ patt.gif patt.jpg patt.png PATT.JPG PATT.Jpg /img/Patt.gif }
     bad = %w{ patt.doc patt.pdf patt.png.txt }

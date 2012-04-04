@@ -10,4 +10,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def new_pattern(image_url)
+    Pattern.new(:title       => "Pattern",
+                          :description => "One pattern",
+                          :image_url   => image_url,
+                          :price       => 1)
+  end
 end
