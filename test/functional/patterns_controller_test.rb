@@ -4,7 +4,7 @@ class PatternsControllerTest < ActionController::TestCase
   setup do
     @pattern = patterns(:one)
     @update = {
-      :title       => 'Patterm',  
+      :title       => 'Pattern',  
       :description => 'Just a pattern',
       :image_url   => 'pattern.png',
       :price       => 1.23
