@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class PatternTest < ActiveSupport::TestCase
+  fixtures :patterns
+
   test "pattern attributes must not be empty" do
     pattern = Pattern.new
     assert pattern.invalid?
@@ -39,8 +41,16 @@ class PatternTest < ActiveSupport::TestCase
     bad.each do |name|
       assert new_pattern(name).invalid?, "#{name} shouldn't be valid"
     end
+  end  
+  
+  test "pattern is not valid without a unique title" do
+    pattern = Pattern.new(:title       => patterns(:ethnic).title,
+                          :description => "Whatever",
+                          :image_url   => "patt.png",
+                          :price       => 2)
+    assert !pattern.save
+    assert_equal "has already been taken", pattern.errors[:title].join("; ")
   end
   
-  
-  
+
 end
