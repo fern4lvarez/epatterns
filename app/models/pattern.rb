@@ -6,8 +6,8 @@ class Pattern < ActiveRecord::Base
   }
   validates :title, :uniqueness => true
   validates :title, :length => {
-    :greater_than_or_equal_to => 10,
-    :message                  => 'must be at least ten characters long.'
+    :maximum => 10,
+    :message => 'must be at least ten characters long.'
   }
   validates :image_url, :format => {
     :with     => %r{\.(gif|jpg|png)$}i,
