@@ -3,6 +3,12 @@ require 'test_helper'
 class PatternsControllerTest < ActionController::TestCase
   setup do
     @pattern = patterns(:one)
+    @update = {
+      :title       => 'Patterm',  
+      :description => 'Just a pattern',
+      :image_url   => 'pattern.png',
+      :price       => 1.23
+    }
   end
 
   test "should get index" do
@@ -18,7 +24,7 @@ class PatternsControllerTest < ActionController::TestCase
 
   test "should create pattern" do
     assert_difference('Pattern.count') do
-      post :create, :pattern => @pattern.attributes
+      post :create, :pattern => @update
     end
 
     assert_redirected_to pattern_path(assigns(:pattern))
@@ -35,7 +41,7 @@ class PatternsControllerTest < ActionController::TestCase
   end
 
   test "should update pattern" do
-    put :update, :id => @pattern, :pattern => @pattern.attributes
+    put :update, :id => @pattern.to_param, :pattern => @update
     assert_redirected_to pattern_path(assigns(:pattern))
   end
 
