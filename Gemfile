@@ -23,6 +23,11 @@ gem 'jquery-rails'
 
 gem 'rake'
 
+group :test do
+  gem 'factory_girl_rails'
+end
+
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

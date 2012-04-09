@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class PatternTest < ActiveSupport::TestCase
-  fixtures :patterns
+  # fixtures :patterns
+  include FactoryGirl::Syntax::Methods
 
   test "pattern attributes must not be empty" do
     pattern = Pattern.new
@@ -18,12 +19,12 @@ class PatternTest < ActiveSupport::TestCase
                           :image_url   => "pattern.png") 
     pattern.price = -1
     assert pattern.invalid?
-    assert_equal "must be greater than or equal to 0.01",
+    assert_equal "must be greater than or equal to 0.01.",
       pattern.errors[:price].join('; ')
       
     pattern.price = 0
     assert pattern.invalid?
-    assert_equal "must be greater than or equal to 0.01",
+    assert_equal "must be greater than or equal to 0.01.",
       pattern.errors[:price].join('; ')
       
     pattern.price = 1
