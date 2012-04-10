@@ -1,0 +1,16 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Your Online Patterns Market</h1>
+
+<% @patterns.each do |pattern| %>
+  <div class="entry">
+    <%= image_tag(pattern.image_url) %>
+    <h3><%= pattern.title %></h3>
+    <%= sanitize(pattern.description) %>
+    <div class="price_line">
+      <span class="price"><%= pattern.price %></span>
+    </div>
+  </div>
+<% end %>

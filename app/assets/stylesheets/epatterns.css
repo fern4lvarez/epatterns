@@ -1,30 +1,30 @@
 /* Global styles */
 
-#store #notice {
-        color: #000;
-        border: 2px solid red;
-        padding: 1em;
-        margin-bottom: 2em;
-        background-color: #f0f0f0;
-        font: bold smaller sans-serif;
+#market #notice {
+  color: #000;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
 }
 
 
-#store h1 {
-        font:  150% sans-serif;
-        color: #226;
-        border-bottom: 3px dotted #77d;
+#market h1 {
+  font:  150% sans-serif;
+  color: #226;
+  border-bottom: 3px dotted #77d;
 }
 
 /* Styles for patterns/index */
 
 #pattern_list table {
-        border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 #pattern_list table tr td {
-        padding: 5px;
-        vertical-align: top;
+  padding: 5px;
+  vertical-align: top;
 }
 
 #pattern_list .list_image {
@@ -37,7 +37,7 @@
 }
 
 #pattern_list .list_description dl {
-        margin: 0;
+  margin: 0;
 }
 
 #pattern_list .list_description dt {
@@ -47,7 +47,7 @@
 }
 
 #pattern_list .list_description dd {
-        margin: 0;
+  margin: 0;
 }
 
 #pattern_list .list_actions {
@@ -66,18 +66,18 @@
 
 /* An entry in the store catalog */
 
-#store  .entry {
+#market  .entry {
   overflow: auto;
   margin-top: 1em;
   border-bottom: 1px dotted #77d;
 }
 
-#store  .title {
+#market  .title {
   font-size: 120%;
   font-family: sans-serif;
 }
 
-#store .entry img {
+#market .entry img {
   width: 80px;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -85,28 +85,71 @@
 }
 
 
-#store .entry h3 {
- margin-top: 0;
- margin-bottom: 2px;
- color: #227;
+#market .entry h3 {
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: #227;
 }
 
-#store .entry p {
- margin-top: 0.5em; 
- margin-bottom: 0.8em; 
+#market .entry p {
+  margin-top: 0.5em; 
+  margin-bottom: 0.8em; 
 }
 
-#store .entry .price_line {
- clear: both;
- margin-bottom: 0.5em;
+#market .entry .price_line {
+  clear: both;
+  margin-bottom: 0.5em;
 }
 
-#store .entry .add_to_cart {
+#market .entry .add_to_cart {
   position: relative;
 }
 
-#store .entry  .price {
+#market .entry  .price {
   color: #44a;
   font-weight: bold;
   margin-right: 2em;
 }
+
+#banner {
+  background: #DEE3E5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid;
+  font: sans-serif, serif;
+  font-size: 18px;
+  color: #3F464A;
+  text-align: center;
+}
+
+#banner img {
+  float: left;
+}
+
+#columns {
+  background: #141;
+}
+
+#main {
+  margin-right: 10em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+#side {
+  float: right;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 9em;
+  background: #141;
+}
+
+#side a {
+  color: #bfb;
+  float: center;
+}
+
+
+

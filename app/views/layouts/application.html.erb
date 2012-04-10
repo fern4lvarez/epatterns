@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ePatterns</title>
+  <title>ePatterns: Your Online Patterns Market</title>
   <%= stylesheet_link_tag "scaffolds" %>
   <%= stylesheet_link_tag "epatterns", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body id="market">
+  <div id="banner">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "ePatterns: Your Online Patterns Market" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <a href="#" >Home</a><br />
+      <a href="#" >About</a><br />
+      <a href="#" >Contact</a><br />
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>
