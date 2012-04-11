@@ -10,7 +10,7 @@
     <h3><%= pattern.title %></h3>
     <%= sanitize(pattern.description) %>
     <div class="price_line">
-      <span class="price"><%= pattern.price.to_s + "€" %></span>
+      <span class="price"><%= currency_euro pattern.price %></span>
     </div>
   </div>
 <% end %>

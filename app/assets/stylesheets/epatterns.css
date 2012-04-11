@@ -12,12 +12,12 @@ body {
   padding: 1em;
   margin-bottom: 2em;
   background: #eeeeee url('../images/grid.png') repeat top left;
-  font: bold smaller sans-serif;
+  font: bold smaller helvetica, sans-serif, serif;
 }
 
 
 #market h1 {
-  font:  150% sans-serif;
+  font:  150% helvetica, sans-serif, serif;
   color: #3F464A;
   border-bottom: 1px dotted #3F464A;
 }
@@ -75,13 +75,13 @@ body {
 #market  .entry {
   /* overflow: auto; */
   margin-top: 1em;
-  border-bottom: 1px dotted #77d;
+  border-bottom: 1px dotted #3F464A;
   position: relative;
 }
 
 #market  .title {
   font-size: 120%;
-  font-family: helvetica, sans-serif;
+  font-family: helvetica, sans-serif, serif;
 }
 
 #market .entry img {
@@ -115,21 +115,21 @@ body {
 }
 
 #market .entry  .price {
-  color: #44a;
+  color: #3F464A;
   font-weight: bold;
   margin-right: 2em;
 }
 
 #banner {
   background: #eeeeee url('../images/grid.png') repeat top left;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 20px;
   border-top: 2px solid;
   border-left: 2px solid;
   font: helvetica, sans-serif, serif;
-  font-size: 20px;
+  font-size: 50px;
   color: #3F464A;
-  text-align: left;
+  text-align: center;
 }
 
 #banner img {
@@ -156,7 +156,7 @@ body {
   padding-top: 1em;
   padding-left: 1em;
   padding-bottom: 1em;
-  width: 117px;
+  width: 144px;
   background: #6D6D6D;
   border-top: 2px solid;
   border-left: 2px solid;

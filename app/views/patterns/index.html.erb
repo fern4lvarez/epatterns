@@ -14,7 +14,7 @@
             <dt><%= pattern.title %></dt>
             <dd><%= truncate(strip_tags(pattern.description),
                     :length => 80) %></dd>
-            <dd><%= pattern.price.to_s + "€" %></dd>
+            <dd><%= currency_euro pattern.price.to_s %></dd>
           </dl>
         </td>
         
