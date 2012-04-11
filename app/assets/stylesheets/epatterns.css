@@ -67,9 +67,10 @@
 /* An entry in the store catalog */
 
 #market  .entry {
-  overflow: auto;
+  /* overflow: auto; */
   margin-top: 1em;
   border-bottom: 1px dotted #77d;
+  position: relative;
 }
 
 #market  .title {
@@ -78,12 +79,14 @@
 }
 
 #market .entry img {
-  width: 80px;
   margin-right: 5px;
   margin-bottom: 5px;
   float: left;
 }
 
+#market .entry div {
+  display: block;
+}
 
 #market .entry h3 {
   margin-top: 0;
@@ -112,14 +115,14 @@
 }
 
 #banner {
-  background: #DEE3E5;
+  background: #EEEEEE;
   padding-top: 10px;
   padding-bottom: 10px;
   border: 2px solid;
   font: sans-serif, serif;
-  font-size: 18px;
+  font-size: 20px;
   color: #3F464A;
-  text-align: center;
+  text-align: left;
 }
 
 #banner img {
@@ -127,7 +130,7 @@
 }
 
 #columns {
-  background: #141;
+  background: #3F464A;
 }
 
 #main {
@@ -143,11 +146,11 @@
   padding-left: 1em;
   padding-bottom: 1em;
   width: 9em;
-  background: #141;
+  background: #3F464A;
 }
 
 #side a {
-  color: #bfb;
+  color: #EEEEEE;
   float: center;
 }
 
