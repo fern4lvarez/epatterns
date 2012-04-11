@@ -1,30 +1,36 @@
 /* Global styles */
 
-#store #notice {
-        color: #000;
-        border: 2px solid red;
-        padding: 1em;
-        margin-bottom: 2em;
-        background-color: #f0f0f0;
-        font: bold smaller sans-serif;
+body {
+	background: #eeeeee url('../images/grid.png') repeat top left;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+
+#market #notice {
+  color: #000;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background: #eeeeee url('../images/grid.png') repeat top left;
+  font: bold smaller sans-serif;
 }
 
 
-#store h1 {
-        font:  150% sans-serif;
-        color: #226;
-        border-bottom: 3px dotted #77d;
+#market h1 {
+  font:  150% sans-serif;
+  color: #3F464A;
+  border-bottom: 1px dotted #3F464A;
 }
 
 /* Styles for patterns/index */
 
 #pattern_list table {
-        border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 #pattern_list table tr td {
-        padding: 5px;
-        vertical-align: top;
+  padding: 5px;
+  vertical-align: top;
 }
 
 #pattern_list .list_image {
@@ -37,7 +43,7 @@
 }
 
 #pattern_list .list_description dl {
-        margin: 0;
+  margin: 0;
 }
 
 #pattern_list .list_description dt {
@@ -47,7 +53,7 @@
 }
 
 #pattern_list .list_description dd {
-        margin: 0;
+  margin: 0;
 }
 
 #pattern_list .list_actions {
@@ -66,47 +72,100 @@
 
 /* An entry in the store catalog */
 
-#store  .entry {
-  overflow: auto;
+#market  .entry {
+  /* overflow: auto; */
   margin-top: 1em;
   border-bottom: 1px dotted #77d;
+  position: relative;
 }
 
-#store  .title {
+#market  .title {
   font-size: 120%;
-  font-family: sans-serif;
+  font-family: helvetica, sans-serif;
 }
 
-#store .entry img {
-  width: 80px;
+#market .entry img {
   margin-right: 5px;
   margin-bottom: 5px;
   float: left;
 }
 
-
-#store .entry h3 {
- margin-top: 0;
- margin-bottom: 2px;
- color: #227;
+#market .entry div {
+  display: block;
 }
 
-#store .entry p {
- margin-top: 0.5em; 
- margin-bottom: 0.8em; 
+#market .entry h3 {
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: #3F464A;
 }
 
-#store .entry .price_line {
- clear: both;
- margin-bottom: 0.5em;
+#market .entry p {
+  margin-top: 0.5em; 
+  margin-bottom: 0.8em; 
 }
 
-#store .entry .add_to_cart {
+#market .entry .price_line {
+  clear: both;
+  margin-bottom: 0.5em;
+}
+
+#market .entry .add_to_cart {
   position: relative;
 }
 
-#store .entry  .price {
+#market .entry  .price {
   color: #44a;
   font-weight: bold;
   margin-right: 2em;
 }
+
+#banner {
+  background: #eeeeee url('../images/grid.png') repeat top left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  font: helvetica, sans-serif, serif;
+  font-size: 20px;
+  color: #3F464A;
+  text-align: left;
+}
+
+#banner img {
+  float: left;
+}
+
+#columns {
+  background: #6D6D6D;
+}
+
+#main {
+  margin-right: 10em;
+  padding-top: 4ex;
+  padding-bottom: 4ex;
+  padding-left: 2em;
+  background: #eeeeee url('../images/grid.png') repeat top left;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-right: 2px solid;
+}
+
+#side {
+  float: right;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 117px;
+  background: #6D6D6D;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+#side a {
+  color: #EEEEEE;
+  float: center;
+}
+
+
+
