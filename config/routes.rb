@@ -1,4 +1,8 @@
 Epatterns::Application.routes.draw do
+  resources :line_works
+
+  resources :portfolios
+
   get "market/index"
 
   resources :patterns
