@@ -15,6 +15,8 @@ class PatternsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:patterns)
+    assert_select '#pattern_list tr', :minimum => 2
+    assert_select 'h1', 'Listing patterns'
   end
 
   test "should get new" do
@@ -52,4 +54,5 @@ class PatternsControllerTest < ActionController::TestCase
 
     assert_redirected_to patterns_path
   end
+
 end

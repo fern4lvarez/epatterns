@@ -1,9 +1,7 @@
 require 'test_helper'
 
 class PatternTest < ActiveSupport::TestCase
-  include FactoryGirl::Syntax::Methods
-
-  test "pattern attributes must not be empty" do
+   test "pattern attributes must not be empty" do
     pattern = Pattern.new
     assert pattern.invalid?
     assert pattern.errors[:title].any?
@@ -51,7 +49,5 @@ class PatternTest < ActiveSupport::TestCase
     assert !pattern.save
     assert_equal "has already been taken", pattern.errors[:title].join("; ")
   end
-
   
-
 end
