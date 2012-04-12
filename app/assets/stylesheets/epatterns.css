@@ -73,7 +73,7 @@ body {
 /* An entry in the store catalog */
 
 #market  .entry {
-  /* overflow: auto; */
+  overflow: auto;
   margin-top: 1em;
   border-bottom: 1px dotted #3F464A;
   position: relative;
@@ -91,7 +91,7 @@ body {
 }
 
 #market .entry div {
-  display: block;
+  display: inline-block;
 }
 
 #market .entry h3 {
@@ -117,7 +117,11 @@ body {
 #market .entry  .price {
   color: #3F464A;
   font-weight: bold;
-  margin-right: 2em;
+  margin-right: 1em;
+}
+
+#market .price_line form {
+  display: inline-block;
 }
 
 #banner {

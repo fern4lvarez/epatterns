@@ -11,6 +11,7 @@
     <%= sanitize(pattern.description) %>
     <div class="price_line">
       <span class="price"><%= currency_euro pattern.price %></span>
+      <%= button_to 'Add to Portfolio', line_works_path(:pattern_id => pattern) %>
     </div>
   </div>
 <% end %>
