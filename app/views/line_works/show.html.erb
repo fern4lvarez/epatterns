@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Pattern:</b>
+  <%= @line_work.pattern_id %>
+</p>
+
+<p>
+  <b>Portfolio:</b>
+  <%= @line_work.portfolio_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_line_work_path(@line_work) %> |
+<%= link_to 'Back', line_works_path %>

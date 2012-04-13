@@ -124,6 +124,15 @@ body {
   display: inline-block;
 }
 
+#market .count {
+  font: helvetica, sans-serif, serif;
+  font-size: 10px;
+  color: #3F464A;
+  float: right;
+  margin-top: 7px;
+  margin-right: 3px;
+}
+
 #banner {
   background: #eeeeee url('../images/grid.png') repeat top left;
   padding-top: 12px;

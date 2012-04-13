@@ -1,0 +1,25 @@
+<h1>Listing line_works</h1>
+
+<table>
+  <tr>
+    <th>Pattern</th>
+    <th>Portfolio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @line_works.each do |line_work| %>
+  <tr>
+    <td><%= line_work.pattern_id %></td>
+    <td><%= line_work.portfolio_id %></td>
+    <td><%= link_to 'Show', line_work %></td>
+    <td><%= link_to 'Edit', edit_line_work_path(line_work) %></td>
+    <td><%= link_to 'Destroy', line_work, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Line work', new_line_work_path %>

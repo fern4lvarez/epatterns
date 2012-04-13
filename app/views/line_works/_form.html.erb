@@ -1,0 +1,25 @@
+<%= form_for(@line_work) do |f| %>
+  <% if @line_work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@line_work.errors.count, "error") %> prohibited this line_work from being saved:</h2>
+
+      <ul>
+      <% @line_work.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pattern_id %><br />
+    <%= f.number_field :pattern_id %>
+  </div>
+  <div class="field">
+    <%= f.label :portfolio_id %><br />
+    <%= f.number_field :portfolio_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

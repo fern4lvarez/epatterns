@@ -5,13 +5,18 @@
 <h1>Your Online Patterns Market</h1>
 
 <% @patterns.each do |pattern| %>
-  <div class="entry">
-    <%= image_tag(pattern.image_url) %>
-    <h3><%= pattern.title %></h3>
-    <%= sanitize(pattern.description) %>
-    <div class="price_line">
-      <span class="price"><%= currency_euro pattern.price %></span>
-      <%= button_to 'Add to Portfolio', line_works_path(:pattern_id => pattern) %>
-    </div>
+<div class="entry">
+  <%= link_to image_tag(pattern.image_url, :title => "Add to Portfolio"), line_works_path(:pattern_id => pattern), :method => :post %>
+  <h3><%= pattern.title %></h3>
+  <%= sanitize(pattern.description) %>
+  <div class="price_line">
+    <span class="price"><%= currency_euro pattern.price %></span>
+    <%= button_to 'Add to Portfolio', line_works_path(:pattern_id => pattern) %>
   </div>
+</div>
 <% end %>
+
+<% if session[:counter] > 5 %>
+<div class="count">You've been here <%= pluralize session[:counter], 'time' %>.</div>
+<% end %>
+

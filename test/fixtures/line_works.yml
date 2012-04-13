@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pattern_id: 1
+  portfolio_id: 1
+
+two:
+  pattern_id: 1
+  portfolio_id: 1

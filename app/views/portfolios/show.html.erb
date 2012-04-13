@@ -1,0 +1,6 @@
+<h2>Your Portfolio</h2>
+<ul>
+  <% @portfolio.line_works.each do |work| %>
+    <li><%= work.pattern.title %></li>
+  <% end %>
+</ul>
