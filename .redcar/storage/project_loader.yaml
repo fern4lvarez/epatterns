@@ -1,0 +1,8 @@
+--- 
+open_files: 
+  - app/controllers/line_works_controller.rb
+  - app/assets/stylesheets/epatterns.css
+  - app/assets/javascripts/application.js
+  - app/assets/javascripts/line_works.js
+  - app/assets/javascripts/market.js
+  - app/assets/javascripts/portfolios.js

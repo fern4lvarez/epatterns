@@ -1,0 +1,21 @@
+--- 
+cursor_positions: 
+  - :path: app/controllers/line_works_controller.rb
+    :cursor_offset: 1285
+    :timestamp: 2012-04-14 03:47:48 +02:00
+  - :path: app/assets/stylesheets/epatterns.css
+    :cursor_offset: 511
+    :timestamp: 2012-04-13 18:56:56 +02:00
+  - :path: app/assets/javascripts/application.js
+    :cursor_offset: 0
+    :timestamp: 2012-04-12 13:31:16 +02:00
+  - :path: app/assets/javascripts/line_works.js
+    :cursor_offset: 0
+    :timestamp: 2012-04-13 18:56:56 +02:00
+  - :path: app/assets/javascripts/market.js
+    :cursor_offset: 0
+    :timestamp: 2012-04-12 13:31:16 +02:00
+  - :path: app/assets/javascripts/portfolios.js
+    :cursor_offset: 0
+    :timestamp: 2012-04-13 18:56:56 +02:00
+files_to_retain: 0
