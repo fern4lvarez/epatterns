@@ -42,7 +42,7 @@ class LineWorksController < ApplicationController
   def create
     @portfolio = current_portfolio
     pattern = Pattern.find(params[:pattern_id])
-    @line_work = @portfolio.line_works.build(:pattern => pattern) 
+    @line_work = @portfolio.add_pattern(pattern.id)
 
     respond_to do |format|
       if @line_work.save
