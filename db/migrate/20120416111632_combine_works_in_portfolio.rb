@@ -1,4 +1,4 @@
-class CombineWorksInPortfolio < ActiveRecord::Migration
+aclass CombineWorksInPortfolio < ActiveRecord::Migration
   def self.up
     # replace multiple works for a single pattern
     # in a portfolio with a single work

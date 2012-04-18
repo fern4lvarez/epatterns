@@ -41,9 +41,10 @@ class PortfoliosControllerTest < ActionController::TestCase
 
   test "should destroy portfolio" do
     assert_difference('Portfolio.count', -1) do
-      delete :destroy, id: @portfolio
+      session[:portfolio_id] = @portfolio.id
+      delete :destroy, :id => @portfolio.to_param
     end
 
-    assert_redirected_to portfolios_path
+    assert_redirected_to market_path
   end
 end

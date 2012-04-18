@@ -4,3 +4,5 @@
     <li><%= work.quantity %> &times; <%= work.pattern.title %></li>
   <% end %>
 </ul>
+
+<%= button_to 'Empty portfolio', @portfolio, :method => :delete, :confirm => 'Are you sure?' %>

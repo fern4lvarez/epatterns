@@ -13,11 +13,16 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/1
   # GET /portfolios/1.json
   def show
-    @portfolio = Portfolio.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @portfolio }
+    begin
+      @portfolio = Portfolio.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error "Attempt to access to invalid portfolio #{params[:id]}"
+      redirect_to market_url, :notice => 'Wrong portfolio!'    
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @portfolio }
+      end
     end
   end
 
@@ -72,11 +77,12 @@ class PortfoliosController < ApplicationController
   # DELETE /portfolios/1
   # DELETE /portfolios/1.json
   def destroy
-    @portfolio = Portfolio.find(params[:id])
+    @portfolio = current_portfolio
     @portfolio.destroy
+    session[:portfolio_id] = nil
 
     respond_to do |format|
-      format.html { redirect_to portfolios_url }
+      format.html { redirect_to market_url, notice: 'Your cart is currently empty.' }
       format.json { head :no_content }
     end
   end

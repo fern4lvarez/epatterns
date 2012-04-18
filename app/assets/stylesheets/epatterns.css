@@ -10,6 +10,7 @@ body {
   color: #000;
   border: 2px solid red;
   padding: 1em;
+  margin-right: 32px;
   margin-bottom: 2em;
   background: #eeeeee url('../images/grid.png') repeat top left;
   font: bold smaller helvetica, sans-serif, serif;
