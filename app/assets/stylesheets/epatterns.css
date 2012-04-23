@@ -137,6 +137,7 @@ body {
 #market .portfolio_box {
   background: url('../images/portfolio.png') no-repeat top left;
   padding-left: 150px;
+  height: 130px;
 }
 
 #market .portfolio_title {
