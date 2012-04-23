@@ -47,7 +47,7 @@ class LineWorksController < ApplicationController
     respond_to do |format|
       if @line_work.save
         reset_counter
-        format.html { redirect_to  @line_work.portfolio, :notice => 'Line work was successfully created.' }
+        format.html { redirect_to  @line_work.portfolio }
         format.json { render json: @line_work, status: :created, location: @line_work }
       else
         format.html { render action: "new" }

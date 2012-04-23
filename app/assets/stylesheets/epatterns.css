@@ -134,6 +134,19 @@ body {
   margin-right: 3px;
 }
 
+#market .portfolio_title {
+  font: 120% bold;
+}
+
+#market .item_price, #market .total_line {
+  text-align: right;
+}
+
+#market .total_line .total_cell {
+  font-weight: bold;
+  borde-top: 1px solid #595;
+}
+
 #banner {
   background: #eeeeee url('../images/grid.png') repeat top left;
   padding-top: 12px;

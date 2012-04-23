@@ -10,4 +10,8 @@ class Portfolio < ActiveRecord::Base
     end
     current_work
   end
+  
+  def total_price
+    line_works.to_a.sum{ |work| work.total_price }
+  end
 end
