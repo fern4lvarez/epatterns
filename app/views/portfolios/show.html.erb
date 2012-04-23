@@ -1,19 +1,20 @@
-<div class="portfolio_title">Your Portfolio</div>
-<table>
-  <% @portfolio.line_works.each do |work| %>
-      <tr>
-        <td><%= work.quantity %>&times;</td>
-        <td><%= work.pattern.title %></td>
-        <td class="work_price"><%= currency_euro work.total_price %></td>
-      </tr>
-  <% end %>
+<div class="portfolio_box">
+  <div class="portfolio_title">Your Portfolio</div>
+  <table>
+    <% @portfolio.line_works.each do |work| %>
+        <tr>
+          <td><%= work.quantity %>&times;</td>
+          <td><%= work.pattern.title %></td>
+          <td class="work_price"><%= currency_euro work.total_price %></td>
+        </tr>
+    <% end %>
+    
+    <tr class="total_line">
+      <td colspan="2">Total</td>
+      <td class="total_cell"><%= currency_euro @portfolio.total_price %></td>
+    </tr>
+    
+  </table>
   
-  <tr class="total_line">
-    <td colspan="2">Total</td>
-    <td class="total_cell"><%= currency_euro @portfolio.total_price %></td>
-  </tr>
-  
-</table>
-
-
-<%= button_to 'Empty portfolio', @portfolio, :method => :delete, :confirm => 'Are you sure?' %>
+  <%= button_to 'Empty portfolio', @portfolio, :method => :delete, :confirm => 'Are you sure?' %>
+</div>

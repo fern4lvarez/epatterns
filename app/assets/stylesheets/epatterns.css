@@ -134,17 +134,22 @@ body {
   margin-right: 3px;
 }
 
+#market .portfolio_box {
+  background: url('../images/portfolio.png') no-repeat top left;
+  padding-left: 150px;
+}
+
 #market .portfolio_title {
   font: 120% bold;
 }
 
-#market .item_price, #market .total_line {
+#market .work_price, #market .total_line {
   text-align: right;
 }
 
 #market .total_line .total_cell {
   font-weight: bold;
-  borde-top: 1px solid #595;
+  border-top: 2px solid #3F464A;
 }
 
 #banner {
@@ -186,7 +191,6 @@ body {
   width: 144px;
   background: #6D6D6D;
   border-top: 2px solid;
-  border-left: 2px solid;
 }
 
 #side a {
