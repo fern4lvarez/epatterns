@@ -7,6 +7,7 @@ class Portfolio < ActiveRecord::Base
       current_work.quantity += 1
     else
       current_work = line_works.build(:pattern_id => pattern_id)
+      current_work.price = current_work.pattern.price
     end
     current_work
   end
